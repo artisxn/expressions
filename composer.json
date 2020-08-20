@@ -1,0 +1,57 @@
+{
+    "name": "codicastudio/expressions",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/expressions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4.8",
+        "illuminate/database": "^7.0",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/database": "^5.0",
+        "orchestra/testbench": "^5.0",
+        "phpstan/phpstan": "^0.12.29",
+        "phpunit/phpunit": "^7.5|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\Contracts\\Love\\": "contracts/",
+            "codicastudio\\Laravel\\Love\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\Tests\\Laravel\\Love\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse -c .phpstan.neon",
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\Laravel\\Love\\LoveServiceProvider",
+                "codicastudio\\Laravel\\Love\\LoveEventServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
